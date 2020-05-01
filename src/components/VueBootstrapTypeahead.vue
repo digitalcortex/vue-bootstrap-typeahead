@@ -6,9 +6,9 @@
           <span class="input-group-text">{{ prepend }}</span>
         </slot>
       </div>
-      <input
+      <b-form-input
         ref="input"
-        type="search"
+        :type="type"
         :class="`form-control ${inputClass}`"
         :placeholder="placeholder"
         :aria-label="placeholder"
@@ -18,6 +18,8 @@
         @input="handleInput($event.target.value)"
         autocomplete="off"
       />
+      <slot name="invalid-feedback"/>
+      <slot name="valid-feedback"/>
       <div v-if="$slots.append || append" class="input-group-append">
         <slot name="append">
           <span class="input-group-text">{{ append }}</span>
@@ -51,12 +53,14 @@
 <script>
 import VueBootstrapTypeaheadList from './VueBootstrapTypeaheadList.vue'
 import ResizeObserver from 'resize-observer-polyfill'
+import { BFormInput } from 'bootstrap-vue'
 
 export default {
   name: 'VueBootstrapTypehead',
 
   components: {
-    VueBootstrapTypeaheadList
+    VueBootstrapTypeaheadList,
+    BFormInput
   },
 
   props: {
@@ -94,7 +98,11 @@ export default {
     },
     placeholder: String,
     prepend: String,
-    append: String
+    append: String,
+    type: {
+      type: String,
+      default: 'search'
+    }
   },
 
   computed: {

@@ -1,13 +1,13 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory();
+		module.exports = factory(require("vue"));
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["VueBootstrapTypeahead"] = factory();
+		exports["VueBootstrapTypeahead"] = factory(require("vue"));
 	else
-		root["VueBootstrapTypeahead"] = factory();
-})((typeof self !== 'undefined' ? self : this), function() {
+		root["VueBootstrapTypeahead"] = factory(root["Vue"]);
+})((typeof self !== 'undefined' ? self : this), function(__WEBPACK_EXTERNAL_MODULE__8bbf__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -441,6 +441,43 @@ if (__webpack_require__("9e1e") && (!CORRECT_NEW || __webpack_require__("79e5")(
 }
 
 __webpack_require__("7a56")('RegExp');
+
+
+/***/ }),
+
+/***/ "4362":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports.nextTick = function nextTick(fn) {
+	setTimeout(fn, 0);
+};
+
+exports.platform = exports.arch = 
+exports.execPath = exports.title = 'browser';
+exports.pid = 1;
+exports.browser = true;
+exports.env = {};
+exports.argv = [];
+
+exports.binding = function (name) {
+	throw new Error('No such module. (Possibly not yet loaded)')
+};
+
+(function () {
+    var cwd = '/';
+    var path;
+    exports.cwd = function () { return cwd };
+    exports.chdir = function (dir) {
+        if (!path) path = __webpack_require__("df7c");
+        cwd = path.resolve(dir, cwd);
+    };
+})();
+
+exports.exit = exports.kill = 
+exports.umask = exports.dlopen = 
+exports.uptime = exports.memoryUsage = 
+exports.uvCounters = function() {};
+exports.features = {};
 
 
 /***/ }),
@@ -1821,17 +1858,6 @@ exports.f = __webpack_require__("9e1e") ? Object.defineProperty : function defin
 
 /***/ }),
 
-/***/ "892a":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VueBootstrapTypeahead_vue_vue_type_style_index_0_id_48792d67_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("9bf9");
-/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VueBootstrapTypeahead_vue_vue_type_style_index_0_id_48792d67_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VueBootstrapTypeahead_vue_vue_type_style_index_0_id_48792d67_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* unused harmony reexport * */
- /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VueBootstrapTypeahead_vue_vue_type_style_index_0_id_48792d67_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-
 /***/ "8b97":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1864,6 +1890,13 @@ module.exports = {
 
 /***/ }),
 
+/***/ "8bbf":
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE__8bbf__;
+
+/***/ }),
+
 /***/ "9093":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1875,6 +1908,94 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
   return $keys(O, hiddenKeys);
 };
 
+
+/***/ }),
+
+/***/ "938d":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(process) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return hasWindowSupport; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return hasDocumentSupport; });
+/* unused harmony export hasNavigatorSupport */
+/* unused harmony export hasPromiseSupport */
+/* unused harmony export hasMutationObserverSupport */
+/* unused harmony export isBrowser */
+/* unused harmony export userAgent */
+/* unused harmony export isJSDOM */
+/* unused harmony export isIE */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return hasPassiveEventSupport; });
+/* unused harmony export hasTouchSupport */
+/* unused harmony export hasPointerEventSupport */
+/* unused harmony export hasIntersectionObserverSupport */
+/* unused harmony export getEnv */
+/* unused harmony export getNoWarn */
+/**
+ * Utilities to get information about the current environment
+ */
+// --- Constants ---
+var hasWindowSupport = typeof window !== 'undefined';
+var hasDocumentSupport = typeof document !== 'undefined';
+var hasNavigatorSupport = typeof navigator !== 'undefined';
+var hasPromiseSupport = typeof Promise !== 'undefined';
+/* istanbul ignore next: JSDOM always returns false */
+
+var hasMutationObserverSupport = typeof MutationObserver !== 'undefined' || typeof WebKitMutationObserver !== 'undefined' || typeof MozMutationObserver !== 'undefined';
+var isBrowser = hasWindowSupport && hasDocumentSupport && hasNavigatorSupport; // Browser type sniffing
+
+var userAgent = isBrowser ? window.navigator.userAgent.toLowerCase() : '';
+var isJSDOM = userAgent.indexOf('jsdom') > 0;
+var isIE = /msie|trident/.test(userAgent); // Determine if the browser supports the option passive for events
+
+var hasPassiveEventSupport = function () {
+  var passiveEventSupported = false;
+
+  if (isBrowser) {
+    try {
+      var options = {
+        get passive() {
+          // This function will be called when the browser
+          // attempts to access the passive property.
+
+          /* istanbul ignore next: will never be called in JSDOM */
+          passiveEventSupported = true;
+        }
+
+      };
+      window.addEventListener('test', options, options);
+      window.removeEventListener('test', options, options);
+    } catch (err) {
+      /* istanbul ignore next: will never be called in JSDOM */
+      passiveEventSupported = false;
+    }
+  }
+
+  return passiveEventSupported;
+}();
+var hasTouchSupport = isBrowser && ('ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0);
+var hasPointerEventSupport = isBrowser && Boolean(window.PointerEvent || window.MSPointerEvent);
+/* istanbul ignore next: JSDOM only checks for 'IntersectionObserver' */
+
+var hasIntersectionObserverSupport = isBrowser && 'IntersectionObserver' in window && 'IntersectionObserverEntry' in window && // Edge 15 and UC Browser lack support for `isIntersecting`
+// but we an use intersectionRatio > 0 instead
+// 'isIntersecting' in window.IntersectionObserverEntry.prototype &&
+'intersectionRatio' in window.IntersectionObserverEntry.prototype; // --- Getters ---
+
+var getEnv = function getEnv(key) {
+  var fallback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+  var env = typeof process !== 'undefined' && process ? Object({"NODE_ENV":"production","BASE_URL":"/vue-bootstrap-typeahead/"}) || {} : {};
+
+  if (!key) {
+    /* istanbul ignore next */
+    return env;
+  }
+
+  return env[key] || fallback;
+};
+var getNoWarn = function getNoWarn() {
+  return getEnv('BOOTSTRAP_VUE_NO_WARN');
+};
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("4362")))
 
 /***/ }),
 
@@ -1902,13 +2023,6 @@ module.exports = function (fn, that, length) {
   };
 };
 
-
-/***/ }),
-
-/***/ "9bf9":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -1952,6 +2066,24 @@ __webpack_require__("214f")('replace', 2, function (defined, REPLACE, $replace) 
   }, $replace];
 });
 
+
+/***/ }),
+
+/***/ "a620":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VueBootstrapTypeahead_vue_vue_type_style_index_0_id_2c155288_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("aa32");
+/* harmony import */ var _node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VueBootstrapTypeahead_vue_vue_type_style_index_0_id_2c155288_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VueBootstrapTypeahead_vue_vue_type_style_index_0_id_2c155288_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_mini_css_extract_plugin_dist_loader_js_ref_6_oneOf_1_0_node_modules_css_loader_index_js_ref_6_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_lib_index_js_ref_6_oneOf_1_2_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VueBootstrapTypeahead_vue_vue_type_style_index_0_id_2c155288_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "aa32":
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ }),
 
@@ -2232,6 +2364,238 @@ module.exports = function (it) {
 
 /***/ }),
 
+/***/ "df7c":
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+// resolves . and .. elements in a path array with directory names there
+// must be no slashes, empty elements, or device names (c:\) in the array
+// (so also no leading and trailing slashes - it does not distinguish
+// relative and absolute paths)
+function normalizeArray(parts, allowAboveRoot) {
+  // if the path tries to go above the root, `up` ends up > 0
+  var up = 0;
+  for (var i = parts.length - 1; i >= 0; i--) {
+    var last = parts[i];
+    if (last === '.') {
+      parts.splice(i, 1);
+    } else if (last === '..') {
+      parts.splice(i, 1);
+      up++;
+    } else if (up) {
+      parts.splice(i, 1);
+      up--;
+    }
+  }
+
+  // if the path is allowed to go above the root, restore leading ..s
+  if (allowAboveRoot) {
+    for (; up--; up) {
+      parts.unshift('..');
+    }
+  }
+
+  return parts;
+}
+
+// Split a filename into [root, dir, basename, ext], unix version
+// 'root' is just a slash, or nothing.
+var splitPathRe =
+    /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
+var splitPath = function(filename) {
+  return splitPathRe.exec(filename).slice(1);
+};
+
+// path.resolve([from ...], to)
+// posix version
+exports.resolve = function() {
+  var resolvedPath = '',
+      resolvedAbsolute = false;
+
+  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
+    var path = (i >= 0) ? arguments[i] : process.cwd();
+
+    // Skip empty and invalid entries
+    if (typeof path !== 'string') {
+      throw new TypeError('Arguments to path.resolve must be strings');
+    } else if (!path) {
+      continue;
+    }
+
+    resolvedPath = path + '/' + resolvedPath;
+    resolvedAbsolute = path.charAt(0) === '/';
+  }
+
+  // At this point the path should be resolved to a full absolute path, but
+  // handle relative paths to be safe (might happen when process.cwd() fails)
+
+  // Normalize the path
+  resolvedPath = normalizeArray(filter(resolvedPath.split('/'), function(p) {
+    return !!p;
+  }), !resolvedAbsolute).join('/');
+
+  return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
+};
+
+// path.normalize(path)
+// posix version
+exports.normalize = function(path) {
+  var isAbsolute = exports.isAbsolute(path),
+      trailingSlash = substr(path, -1) === '/';
+
+  // Normalize the path
+  path = normalizeArray(filter(path.split('/'), function(p) {
+    return !!p;
+  }), !isAbsolute).join('/');
+
+  if (!path && !isAbsolute) {
+    path = '.';
+  }
+  if (path && trailingSlash) {
+    path += '/';
+  }
+
+  return (isAbsolute ? '/' : '') + path;
+};
+
+// posix version
+exports.isAbsolute = function(path) {
+  return path.charAt(0) === '/';
+};
+
+// posix version
+exports.join = function() {
+  var paths = Array.prototype.slice.call(arguments, 0);
+  return exports.normalize(filter(paths, function(p, index) {
+    if (typeof p !== 'string') {
+      throw new TypeError('Arguments to path.join must be strings');
+    }
+    return p;
+  }).join('/'));
+};
+
+
+// path.relative(from, to)
+// posix version
+exports.relative = function(from, to) {
+  from = exports.resolve(from).substr(1);
+  to = exports.resolve(to).substr(1);
+
+  function trim(arr) {
+    var start = 0;
+    for (; start < arr.length; start++) {
+      if (arr[start] !== '') break;
+    }
+
+    var end = arr.length - 1;
+    for (; end >= 0; end--) {
+      if (arr[end] !== '') break;
+    }
+
+    if (start > end) return [];
+    return arr.slice(start, end - start + 1);
+  }
+
+  var fromParts = trim(from.split('/'));
+  var toParts = trim(to.split('/'));
+
+  var length = Math.min(fromParts.length, toParts.length);
+  var samePartsLength = length;
+  for (var i = 0; i < length; i++) {
+    if (fromParts[i] !== toParts[i]) {
+      samePartsLength = i;
+      break;
+    }
+  }
+
+  var outputParts = [];
+  for (var i = samePartsLength; i < fromParts.length; i++) {
+    outputParts.push('..');
+  }
+
+  outputParts = outputParts.concat(toParts.slice(samePartsLength));
+
+  return outputParts.join('/');
+};
+
+exports.sep = '/';
+exports.delimiter = ':';
+
+exports.dirname = function(path) {
+  var result = splitPath(path),
+      root = result[0],
+      dir = result[1];
+
+  if (!root && !dir) {
+    // No dirname whatsoever
+    return '.';
+  }
+
+  if (dir) {
+    // It has a dirname, strip trailing slash
+    dir = dir.substr(0, dir.length - 1);
+  }
+
+  return root + dir;
+};
+
+
+exports.basename = function(path, ext) {
+  var f = splitPath(path)[2];
+  // TODO: make this comparison case-insensitive on windows?
+  if (ext && f.substr(-1 * ext.length) === ext) {
+    f = f.substr(0, f.length - ext.length);
+  }
+  return f;
+};
+
+
+exports.extname = function(path) {
+  return splitPath(path)[3];
+};
+
+function filter (xs, f) {
+    if (xs.filter) return xs.filter(f);
+    var res = [];
+    for (var i = 0; i < xs.length; i++) {
+        if (f(xs[i], i, xs)) res.push(xs[i]);
+    }
+    return res;
+}
+
+// String.prototype.substr - negative index don't work in IE8
+var substr = 'ab'.substr(-1) === 'b'
+    ? function (str, start, len) { return str.substr(start, len) }
+    : function (str, start, len) {
+        if (start < 0) start = str.length + start;
+        return str.substr(start, len);
+    }
+;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("4362")))
+
+/***/ }),
+
 /***/ "e11e":
 /***/ (function(module, exports) {
 
@@ -2261,20 +2625,20 @@ __webpack_require__.r(__webpack_exports__);
 // EXTERNAL MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 var setPublicPath = __webpack_require__("1eb2");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"d50f023a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueBootstrapTypeahead.vue?vue&type=template&id=48792d67&scoped=true&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{class:_vm.sizeClasses},[(_vm.$slots.prepend || _vm.prepend)?_c('div',{ref:"prependDiv",staticClass:"input-group-prepend"},[_vm._t("prepend",[_c('span',{staticClass:"input-group-text"},[_vm._v(_vm._s(_vm.prepend))])])],2):_vm._e(),_c('input',{ref:"input",class:("form-control " + _vm.inputClass),attrs:{"type":"search","placeholder":_vm.placeholder,"aria-label":_vm.placeholder,"autocomplete":"off"},domProps:{"value":_vm.inputValue},on:{"focus":function($event){_vm.isFocused = true},"blur":_vm.handleBlur,"input":function($event){_vm.handleInput($event.target.value)}}}),(_vm.$slots.append || _vm.append)?_c('div',{staticClass:"input-group-append"},[_vm._t("append",[_c('span',{staticClass:"input-group-text"},[_vm._v(_vm._s(_vm.append))])])],2):_vm._e()]),_c('vue-bootstrap-typeahead-list',{directives:[{name:"show",rawName:"v-show",value:(_vm.isFocused && _vm.data.length > 0),expression:"isFocused && data.length > 0"}],ref:"list",staticClass:"vbt-autcomplete-list",attrs:{"query":_vm.inputValue,"data":_vm.formattedData,"background-variant":_vm.backgroundVariant,"text-variant":_vm.textVariant,"maxMatches":_vm.maxMatches,"minMatchingChars":_vm.minMatchingChars},on:{"hit":_vm.handleHit},scopedSlots:_vm._u([_vm._l((_vm.$scopedSlots),function(slot,slotName){return {key:slotName,fn:function(ref){
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d50f023a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueBootstrapTypeahead.vue?vue&type=template&id=2c155288&scoped=true&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{class:_vm.sizeClasses},[(_vm.$slots.prepend || _vm.prepend)?_c('div',{ref:"prependDiv",staticClass:"input-group-prepend"},[_vm._t("prepend",[_c('span',{staticClass:"input-group-text"},[_vm._v(_vm._s(_vm.prepend))])])],2):_vm._e(),_c('b-form-input',{ref:"input",class:("form-control " + _vm.inputClass),attrs:{"type":_vm.type,"placeholder":_vm.placeholder,"aria-label":_vm.placeholder,"value":_vm.inputValue,"autocomplete":"off"},on:{"focus":function($event){_vm.isFocused = true},"blur":_vm.handleBlur,"input":function($event){_vm.handleInput($event.target.value)}}}),_vm._t("invalid-feedback"),_vm._t("valid-feedback"),(_vm.$slots.append || _vm.append)?_c('div',{staticClass:"input-group-append"},[_vm._t("append",[_c('span',{staticClass:"input-group-text"},[_vm._v(_vm._s(_vm.append))])])],2):_vm._e()],2),_c('vue-bootstrap-typeahead-list',{directives:[{name:"show",rawName:"v-show",value:(_vm.isFocused && _vm.data.length > 0),expression:"isFocused && data.length > 0"}],ref:"list",staticClass:"vbt-autcomplete-list",attrs:{"query":_vm.inputValue,"data":_vm.formattedData,"background-variant":_vm.backgroundVariant,"text-variant":_vm.textVariant,"maxMatches":_vm.maxMatches,"minMatchingChars":_vm.minMatchingChars},on:{"hit":_vm.handleHit},scopedSlots:_vm._u([_vm._l((_vm.$scopedSlots),function(slot,slotName){return {key:slotName,fn:function(ref){
 var data = ref.data;
 var htmlText = ref.htmlText;
 return [_vm._t(slotName,null,null,{ data: data, htmlText: htmlText })]}}})])})],1)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/VueBootstrapTypeahead.vue?vue&type=template&id=48792d67&scoped=true&
+// CONCATENATED MODULE: ./src/components/VueBootstrapTypeahead.vue?vue&type=template&id=2c155288&scoped=true&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.number.constructor.js
 var es6_number_constructor = __webpack_require__("c5f6");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"d50f023a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueBootstrapTypeaheadList.vue?vue&type=template&id=7e679de0&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d50f023a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueBootstrapTypeaheadList.vue?vue&type=template&id=7e679de0&
 var VueBootstrapTypeaheadListvue_type_template_id_7e679de0_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"list-group shadow"},_vm._l((_vm.matchedItems),function(item,id){return _c('vue-bootstrap-typeahead-list-item',{key:id,attrs:{"data":item.data,"html-text":_vm.highlight(item.text),"background-variant":_vm.backgroundVariant,"text-variant":_vm.textVariant},nativeOn:{"click":function($event){_vm.handleHit(item, $event)}},scopedSlots:_vm._u([{key:"suggestion",fn:function(ref){
 var data = ref.data;
 var htmlText = ref.htmlText;
@@ -2296,7 +2660,7 @@ var es6_regexp_constructor = __webpack_require__("3b2b");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.regexp.replace.js
 var es6_regexp_replace = __webpack_require__("a481");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules//.cache//vue-loader","cacheIdentifier":"d50f023a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueBootstrapTypeaheadListItem.vue?vue&type=template&id=367d6487&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"d50f023a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueBootstrapTypeaheadListItem.vue?vue&type=template&id=367d6487&
 var VueBootstrapTypeaheadListItemvue_type_template_id_367d6487_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('a',{class:_vm.textClasses,attrs:{"tabindex":"0","href":"#"},on:{"mouseover":function($event){_vm.active = true},"mouseout":function($event){_vm.active = false}}},[_vm._t("suggestion",[_c('span',{domProps:{"innerHTML":_vm._s(_vm.htmlText)}})],null,{ data: _vm.data, htmlText: _vm.htmlText })],2)}
 var VueBootstrapTypeaheadListItemvue_type_template_id_367d6487_staticRenderFns = []
 
@@ -2606,6 +2970,1930 @@ VueBootstrapTypeaheadList_component.options.__file = "VueBootstrapTypeaheadList.
 // EXTERNAL MODULE: ./node_modules/resize-observer-polyfill/dist/ResizeObserver.es.js
 var ResizeObserver_es = __webpack_require__("6dd8");
 
+// EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
+var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
+var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpack_require__.n(external_commonjs_vue_commonjs2_vue_root_Vue_);
+
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/vue.js
+//
+// Single point of contact for Vue
+//
+// TODO:
+//   Conditionally import Vue if no global Vue
+//
+
+/* harmony default export */ var vue = (external_commonjs_vue_commonjs2_vue_root_Vue_default.a);
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/array.js
+// --- Static ---
+var from = function from() {
+  return Array.from.apply(Array, arguments);
+};
+var isArray = function isArray(val) {
+  return Array.isArray(val);
+}; // --- Instance ---
+
+var arrayIncludes = function arrayIncludes(array, value) {
+  return array.indexOf(value) !== -1;
+};
+var concat = function concat() {
+  for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  return Array.prototype.concat.apply([], args);
+};
+// EXTERNAL MODULE: ./node_modules/bootstrap-vue/esm/utils/env.js
+var env = __webpack_require__("938d");
+
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/object.js
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+ // --- Static ---
+
+var object_assign = function assign() {
+  return Object.assign.apply(Object, arguments);
+};
+var create = function create(proto, optionalProps) {
+  return Object.create(proto, optionalProps);
+};
+var defineProperties = function defineProperties(obj, props) {
+  return Object.defineProperties(obj, props);
+};
+var defineProperty = function defineProperty(obj, prop, descriptor) {
+  return Object.defineProperty(obj, prop, descriptor);
+};
+var freeze = function freeze(obj) {
+  return Object.freeze(obj);
+};
+var getOwnPropertyNames = function getOwnPropertyNames(obj) {
+  return Object.getOwnPropertyNames(obj);
+};
+var getOwnPropertyDescriptor = function getOwnPropertyDescriptor(obj, prop) {
+  return Object.getOwnPropertyDescriptor(obj, prop);
+};
+var getOwnPropertySymbols = function getOwnPropertySymbols(obj) {
+  return Object.getOwnPropertySymbols(obj);
+};
+var getPrototypeOf = function getPrototypeOf(obj) {
+  return Object.getPrototypeOf(obj);
+};
+var is = function is(value1, value2) {
+  return Object.is(value1, value2);
+};
+var isFrozen = function isFrozen(obj) {
+  return Object.isFrozen(obj);
+};
+var keys = function keys(obj) {
+  return Object.keys(obj);
+}; // --- "Instance" ---
+
+var object_hasOwnProperty = function hasOwnProperty(obj, prop) {
+  return Object.prototype.hasOwnProperty.call(obj, prop);
+};
+var object_toString = function toString(obj) {
+  return Object.prototype.toString.call(obj);
+}; // --- Utilities ---
+
+/**
+ * Quick object check - this is primarily used to tell
+ * Objects from primitive values when we know the value
+ * is a JSON-compliant type.
+ * Note object could be a complex type like array, date, etc.
+ */
+
+var isObject = function isObject(obj) {
+  return obj !== null && _typeof(obj) === 'object';
+};
+/**
+ * Strict object type check. Only returns true
+ * for plain JavaScript objects.
+ */
+
+var isPlainObject = function isPlainObject(obj) {
+  return Object.prototype.toString.call(obj) === '[object Object]';
+};
+/**
+ * Shallow copy an object. If the passed in object
+ * is null or undefined, returns an empty object
+ */
+
+var clone = function clone(obj) {
+  return _objectSpread({}, obj);
+};
+/**
+ * Return a shallow copy of object with the specified properties only
+ * @link https://gist.github.com/bisubus/2da8af7e801ffd813fab7ac221aa7afc
+ */
+
+var pick = function pick(obj, props) {
+  return keys(obj).filter(function (key) {
+    return props.indexOf(key) !== -1;
+  }).reduce(function (result, key) {
+    return _objectSpread({}, result, _defineProperty({}, key, obj[key]));
+  }, {});
+};
+/**
+ * Return a shallow copy of object with the specified properties omitted
+ * @link https://gist.github.com/bisubus/2da8af7e801ffd813fab7ac221aa7afc
+ */
+
+var omit = function omit(obj, props) {
+  return keys(obj).filter(function (key) {
+    return props.indexOf(key) === -1;
+  }).reduce(function (result, key) {
+    return _objectSpread({}, result, _defineProperty({}, key, obj[key]));
+  }, {});
+};
+/**
+ * Convenience method to create a read-only descriptor
+ */
+
+var readonlyDescriptor = function readonlyDescriptor() {
+  return {
+    enumerable: true,
+    configurable: false,
+    writable: false
+  };
+};
+/**
+ * Deep-freezes and object, making it immutable / read-only.
+ * Returns the same object passed-in, but frozen.
+ * Freezes inner object/array/values first.
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze
+ * Note: this method will not work for property values using Symbol() as a key
+ */
+
+var object_deepFreeze = function deepFreeze(obj) {
+  // Retrieve the property names defined on object/array
+  // Note: `keys` will ignore properties that are keyed by a `Symbol()`
+  var props = keys(obj); // Iterate over each prop and recursively freeze it
+
+  props.forEach(function (prop) {
+    var value = obj[prop]; // If value is a plain object or array, we deepFreeze it
+
+    obj[prop] = value && (isPlainObject(value) || isArray(value)) ? deepFreeze(value) : value;
+  });
+  return freeze(obj);
+};
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/events.js
+
+ // --- Constants ---
+
+var EVENT_OPTIONS_PASSIVE = {
+  passive: true
+};
+var EVENT_OPTIONS_NO_CAPTURE = {
+  passive: true,
+  capture: false
+}; // --- Utils ---
+// Normalize event options based on support of passive option
+// Exported only for testing purposes
+
+var events_parseEventOptions = function parseEventOptions(options) {
+  /* istanbul ignore else: can't test in JSDOM, as it supports passive */
+  if (env["b" /* hasPassiveEventSupport */]) {
+    return isObject(options) ? options : {
+      capture: !!options || false
+    };
+  } else {
+    // Need to translate to actual Boolean value
+    return !!(isObject(options) ? options.capture : options);
+  }
+}; // Attach an event listener to an element
+
+var eventOn = function eventOn(el, evtName, handler, options) {
+  if (el && el.addEventListener) {
+    el.addEventListener(evtName, handler, events_parseEventOptions(options));
+  }
+}; // Remove an event listener from an element
+
+var eventOff = function eventOff(el, evtName, handler, options) {
+  if (el && el.removeEventListener) {
+    el.removeEventListener(evtName, handler, events_parseEventOptions(options));
+  }
+}; // Utility method to add/remove a event listener based on first argument (boolean)
+// It passes all other arguments to the `eventOn()` or `eventOff` method
+
+var eventOnOff = function eventOnOff(on) {
+  var method = on ? eventOn : eventOff;
+
+  for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+    args[_key - 1] = arguments[_key];
+  }
+
+  method.apply(void 0, args);
+};
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/mixins/id.js
+/*
+ * SSR Safe Client Side ID attribute generation
+ * id's can only be generated client side, after mount.
+ * this._uid is not synched between server and client.
+ */
+// @vue/component
+/* harmony default export */ var id = ({
+  props: {
+    id: {
+      type: String // default: null
+
+    }
+  },
+  data: function data() {
+    return {
+      localId_: null
+    };
+  },
+  computed: {
+    safeId: function safeId() {
+      // Computed property that returns a dynamic function for creating the ID.
+      // Reacts to changes in both .id and .localId_ And regens a new function
+      var id = this.id || this.localId_; // We return a function that accepts an optional suffix string
+      // So this computed prop looks and works like a method!!!
+      // But benefits from Vue's Computed prop caching
+
+      var fn = function fn(suffix) {
+        if (!id) {
+          return null;
+        }
+
+        suffix = String(suffix || '').replace(/\s+/g, '_');
+        return suffix ? id + '_' + suffix : id;
+      };
+
+      return fn;
+    }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    // mounted only occurs client side
+    this.$nextTick(function () {
+      // Update dom with auto ID after dom loaded to prevent
+      // SSR hydration errors.
+      _this.localId_ = "__BVID__".concat(_this._uid);
+    });
+  }
+});
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/safe-types.js
+function safe_types_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { safe_types_typeof = function _typeof(obj) { return typeof obj; }; } else { safe_types_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return safe_types_typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (safe_types_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _wrapNativeSuper(Class) { var _cache = typeof Map === "function" ? new Map() : undefined; _wrapNativeSuper = function _wrapNativeSuper(Class) { if (Class === null || !_isNativeFunction(Class)) return Class; if (typeof Class !== "function") { throw new TypeError("Super expression must either be null or a function"); } if (typeof _cache !== "undefined") { if (_cache.has(Class)) return _cache.get(Class); _cache.set(Class, Wrapper); } function Wrapper() { return _construct(Class, arguments, _getPrototypeOf(this).constructor); } Wrapper.prototype = Object.create(Class.prototype, { constructor: { value: Wrapper, enumerable: false, writable: true, configurable: true } }); return _setPrototypeOf(Wrapper, Class); }; return _wrapNativeSuper(Class); }
+
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _isNativeFunction(fn) { return Function.toString.call(fn).indexOf("[native code]") !== -1; }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+/**
+ * SSR safe types
+ */
+
+var w = env["c" /* hasWindowSupport */] ? window : {};
+var safe_types_Element = env["c" /* hasWindowSupport */] ? w.Element : /*#__PURE__*/function (_Object) {
+  _inherits(Element, _Object);
+
+  var _super = _createSuper(Element);
+
+  function Element() {
+    _classCallCheck(this, Element);
+
+    return _super.apply(this, arguments);
+  }
+
+  return Element;
+}( /*#__PURE__*/_wrapNativeSuper(Object));
+var HTMLElement = env["c" /* hasWindowSupport */] ? w.HTMLElement : /*#__PURE__*/function (_Element) {
+  _inherits(HTMLElement, _Element);
+
+  var _super2 = _createSuper(HTMLElement);
+
+  function HTMLElement() {
+    _classCallCheck(this, HTMLElement);
+
+    return _super2.apply(this, arguments);
+  }
+
+  return HTMLElement;
+}(safe_types_Element);
+var SVGElement = env["c" /* hasWindowSupport */] ? w.SVGElement : /*#__PURE__*/function (_Element2) {
+  _inherits(SVGElement, _Element2);
+
+  var _super3 = _createSuper(SVGElement);
+
+  function SVGElement() {
+    _classCallCheck(this, SVGElement);
+
+    return _super3.apply(this, arguments);
+  }
+
+  return SVGElement;
+}(safe_types_Element);
+var File = env["c" /* hasWindowSupport */] ? w.File : /*#__PURE__*/function (_Object2) {
+  _inherits(File, _Object2);
+
+  var _super4 = _createSuper(File);
+
+  function File() {
+    _classCallCheck(this, File);
+
+    return _super4.apply(this, arguments);
+  }
+
+  return File;
+}( /*#__PURE__*/_wrapNativeSuper(Object));
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/inspect.js
+function inspect_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { inspect_typeof = function _typeof(obj) { return typeof obj; }; } else { inspect_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return inspect_typeof(obj); }
+
+
+
+ // --- Convenience inspection utilities ---
+
+var toType = function toType(val) {
+  return inspect_typeof(val);
+};
+var toRawType = function toRawType(val) {
+  return Object.prototype.toString.call(val).slice(8, -1);
+};
+var toRawTypeLC = function toRawTypeLC(val) {
+  return toRawType(val).toLowerCase();
+};
+var isUndefined = function isUndefined(val) {
+  return val === undefined;
+};
+var isNull = function isNull(val) {
+  return val === null;
+};
+var isEmptyString = function isEmptyString(val) {
+  return val === '';
+};
+var isUndefinedOrNull = function isUndefinedOrNull(val) {
+  return isUndefined(val) || isNull(val);
+};
+var isUndefinedOrNullOrEmpty = function isUndefinedOrNullOrEmpty(val) {
+  return isUndefinedOrNull(val) || isEmptyString(val);
+};
+var isFunction = function isFunction(val) {
+  return toType(val) === 'function';
+};
+var isBoolean = function isBoolean(val) {
+  return toType(val) === 'boolean';
+};
+var isString = function isString(val) {
+  return toType(val) === 'string';
+};
+var isNumber = function isNumber(val) {
+  return toType(val) === 'number';
+};
+var isPrimitive = function isPrimitive(val) {
+  return isBoolean(val) || isString(val) || isNumber(val);
+};
+var isDate = function isDate(val) {
+  return val instanceof Date;
+};
+var isEvent = function isEvent(val) {
+  return val instanceof Event;
+};
+var inspect_isFile = function isFile(val) {
+  return val instanceof File;
+};
+var isRegExp = function isRegExp(val) {
+  return toRawType(val) === 'RegExp';
+};
+var isPromise = function isPromise(val) {
+  return !isUndefinedOrNull(val) && isFunction(val.then) && isFunction(val.catch);
+}; // Extra convenience named re-exports
+
+
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/number.js
+// Number utilities
+// Converts a value (string, number, etc) to an integer number
+// Assumes radix base 10
+var toInteger = function toInteger(value) {
+  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : NaN;
+  var integer = parseInt(value, 10);
+  return isNaN(integer) ? defaultValue : integer;
+}; // Converts a value (string, number, etc) to a number
+
+var toFloat = function toFloat(value) {
+  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : NaN;
+  var float = parseFloat(value);
+  return isNaN(float) ? defaultValue : float;
+}; // Converts a value (string, number, etc) to a string
+// representation with `precision` digits after the decimal
+// Returns the string 'NaN' if the value cannot be converted
+
+var toFixed = function toFixed(val, precision) {
+  return toFloat(val).toFixed(toInteger(precision, 0));
+};
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/dom.js
+
+
+
+ // --- Constants ---
+
+var TABABLE_SELECTOR = ['button', '[href]:not(.disabled)', 'input', 'select', 'textarea', '[tabindex]', '[contenteditable]'].map(function (s) {
+  return "".concat(s, ":not(:disabled):not([disabled])");
+}).join(', ');
+var dom_w = env["c" /* hasWindowSupport */] ? window : {};
+var d = env["a" /* hasDocumentSupport */] ? document : {};
+var elProto = typeof Element !== 'undefined' ? Element.prototype : {}; // --- Normalization utils ---
+// See: https://developer.mozilla.org/en-US/docs/Web/API/Element/matches#Polyfill
+
+/* istanbul ignore next */
+
+var matchesEl = elProto.matches || elProto.msMatchesSelector || elProto.webkitMatchesSelector; // See: https://developer.mozilla.org/en-US/docs/Web/API/Element/closest
+
+/* istanbul ignore next */
+
+var closestEl = elProto.closest || function (sel)
+/* istanbul ignore next */
+{
+  var el = this;
+
+  do {
+    // Use our "patched" matches function
+    if (matches(el, sel)) {
+      return el;
+    }
+
+    el = el.parentElement || el.parentNode;
+  } while (!isNull(el) && el.nodeType === Node.ELEMENT_NODE);
+
+  return null;
+}; // `requestAnimationFrame()` convenience method
+
+/* istanbul ignore next: JSDOM always returns the first option */
+
+var requestAF = dom_w.requestAnimationFrame || dom_w.webkitRequestAnimationFrame || dom_w.mozRequestAnimationFrame || dom_w.msRequestAnimationFrame || dom_w.oRequestAnimationFrame || // Fallback, but not a true polyfill
+// Only needed for Opera Mini
+
+/* istanbul ignore next */
+function (cb) {
+  return setTimeout(cb, 16);
+};
+var MutationObs = dom_w.MutationObserver || dom_w.WebKitMutationObserver || dom_w.MozMutationObserver || null; // --- Utils ---
+// Remove a node from DOM
+
+var removeNode = function removeNode(el) {
+  return el && el.parentNode && el.parentNode.removeChild(el);
+}; // Determine if an element is an HTML element
+
+var isElement = function isElement(el) {
+  return !!(el && el.nodeType === Node.ELEMENT_NODE);
+}; // Determine if an HTML element is visible - Faster than CSS check
+
+var isVisible = function isVisible(el) {
+  if (!isElement(el) || !el.parentNode || !dom_contains(d.body, el)) {
+    // Note this can fail for shadow dom elements since they
+    // are not a direct descendant of document.body
+    return false;
+  }
+
+  if (el.style.display === 'none') {
+    // We do this check to help with vue-test-utils when using v-show
+
+    /* istanbul ignore next */
+    return false;
+  } // All browsers support getBoundingClientRect(), except JSDOM as it returns all 0's for values :(
+  // So any tests that need isVisible will fail in JSDOM
+  // Except when we override the getBCR prototype in some tests
+
+
+  var bcr = getBCR(el);
+  return !!(bcr && bcr.height > 0 && bcr.width > 0);
+}; // Determine if an element is disabled
+
+var isDisabled = function isDisabled(el) {
+  return !isElement(el) || el.disabled || hasAttr(el, 'disabled') || hasClass(el, 'disabled');
+}; // Cause/wait-for an element to reflow its content (adjusting its height/width)
+
+var reflow = function reflow(el) {
+  // Requesting an elements offsetHight will trigger a reflow of the element content
+
+  /* istanbul ignore next: reflow doesn't happen in JSDOM */
+  return isElement(el) && el.offsetHeight;
+}; // Select all elements matching selector. Returns `[]` if none found
+
+var dom_selectAll = function selectAll(selector, root) {
+  return from((isElement(root) ? root : d).querySelectorAll(selector));
+}; // Select a single element, returns `null` if not found
+
+var dom_select = function select(selector, root) {
+  return (isElement(root) ? root : d).querySelector(selector) || null;
+}; // Determine if an element matches a selector
+
+var matches = function matches(el, selector) {
+  return isElement(el) ? matchesEl.call(el, selector) : false;
+}; // Finds closest element matching selector. Returns `null` if not found
+
+var closest = function closest(selector, root) {
+  var includeRoot = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+  if (!isElement(root)) {
+    return null;
+  }
+
+  var el = closestEl.call(root, selector); // Native closest behaviour when `includeRoot` is truthy,
+  // else emulate jQuery closest and return `null` if match is
+  // the passed in root element when `includeRoot` is falsey
+
+  return includeRoot ? el : el === root ? null : el;
+}; // Returns true if the parent element contains the child element
+
+var dom_contains = function contains(parent, child) {
+  return parent && isFunction(parent.contains) ? parent.contains(child) : false;
+}; // Get an element given an ID
+
+var getById = function getById(id) {
+  return d.getElementById(/^#/.test(id) ? id.slice(1) : id) || null;
+}; // Add a class to an element
+
+var addClass = function addClass(el, className) {
+  // We are checking for `el.classList` existence here since IE 11
+  // returns `undefined` for some elements (e.g. SVG elements)
+  // See https://github.com/bootstrap-vue/bootstrap-vue/issues/2713
+  if (className && isElement(el) && el.classList) {
+    el.classList.add(className);
+  }
+}; // Remove a class from an element
+
+var removeClass = function removeClass(el, className) {
+  // We are checking for `el.classList` existence here since IE 11
+  // returns `undefined` for some elements (e.g. SVG elements)
+  // See https://github.com/bootstrap-vue/bootstrap-vue/issues/2713
+  if (className && isElement(el) && el.classList) {
+    el.classList.remove(className);
+  }
+}; // Test if an element has a class
+
+var hasClass = function hasClass(el, className) {
+  // We are checking for `el.classList` existence here since IE 11
+  // returns `undefined` for some elements (e.g. SVG elements)
+  // See https://github.com/bootstrap-vue/bootstrap-vue/issues/2713
+  if (className && isElement(el) && el.classList) {
+    return el.classList.contains(className);
+  }
+
+  return false;
+}; // Set an attribute on an element
+
+var setAttr = function setAttr(el, attr, val) {
+  if (attr && isElement(el)) {
+    el.setAttribute(attr, val);
+  }
+}; // Remove an attribute from an element
+
+var removeAttr = function removeAttr(el, attr) {
+  if (attr && isElement(el)) {
+    el.removeAttribute(attr);
+  }
+}; // Get an attribute value from an element
+// Returns `null` if not found
+
+var getAttr = function getAttr(el, attr) {
+  return attr && isElement(el) ? el.getAttribute(attr) : null;
+}; // Determine if an attribute exists on an element
+// Returns `true` or `false`, or `null` if element not found
+
+var hasAttr = function hasAttr(el, attr) {
+  return attr && isElement(el) ? el.hasAttribute(attr) : null;
+}; // Return the Bounding Client Rect of an element
+// Returns `null` if not an element
+
+/* istanbul ignore next: getBoundingClientRect() doesn't work in JSDOM */
+
+var getBCR = function getBCR(el) {
+  return isElement(el) ? el.getBoundingClientRect() : null;
+}; // Get computed style object for an element
+
+/* istanbul ignore next: getComputedStyle() doesn't work in JSDOM */
+
+var dom_getCS = function getCS(el) {
+  return env["c" /* hasWindowSupport */] && isElement(el) ? dom_w.getComputedStyle(el) : {};
+}; // Returns a `Selection` object representing the range of text selected
+// Returns `null` if no window support is given
+
+/* istanbul ignore next: getSelection() doesn't work in JSDOM */
+
+var dom_getSel = function getSel() {
+  return env["c" /* hasWindowSupport */] && dom_w.getSelection ? dom_w.getSelection() : null;
+}; // Return an element's offset with respect to document element
+// https://j11y.io/jquery/#v=git&fn=jQuery.fn.offset
+
+var offset = function offset(el)
+/* istanbul ignore next: getBoundingClientRect(), getClientRects() doesn't work in JSDOM */
+{
+  var _offset = {
+    top: 0,
+    left: 0
+  };
+
+  if (!isElement(el) || el.getClientRects().length === 0) {
+    return _offset;
+  }
+
+  var bcr = getBCR(el);
+
+  if (bcr) {
+    var win = el.ownerDocument.defaultView;
+    _offset.top = bcr.top + win.pageYOffset;
+    _offset.left = bcr.left + win.pageXOffset;
+  }
+
+  return _offset;
+}; // Return an element's offset with respect to to its offsetParent
+// https://j11y.io/jquery/#v=git&fn=jQuery.fn.position
+
+var dom_position = function position(el)
+/* istanbul ignore next: getBoundingClientRect() doesn't work in JSDOM */
+{
+  var _offset = {
+    top: 0,
+    left: 0
+  };
+
+  if (!isElement(el)) {
+    return _offset;
+  }
+
+  var parentOffset = {
+    top: 0,
+    left: 0
+  };
+  var elStyles = dom_getCS(el);
+
+  if (elStyles.position === 'fixed') {
+    _offset = getBCR(el) || _offset;
+  } else {
+    _offset = offset(el);
+    var doc = el.ownerDocument;
+    var offsetParent = el.offsetParent || doc.documentElement;
+
+    while (offsetParent && (offsetParent === doc.body || offsetParent === doc.documentElement) && dom_getCS(offsetParent).position === 'static') {
+      offsetParent = offsetParent.parentNode;
+    }
+
+    if (offsetParent && offsetParent !== el && offsetParent.nodeType === Node.ELEMENT_NODE) {
+      parentOffset = offset(offsetParent);
+      var offsetParentStyles = dom_getCS(offsetParent);
+      parentOffset.top += toFloat(offsetParentStyles.borderTopWidth, 0);
+      parentOffset.left += toFloat(offsetParentStyles.borderLeftWidth, 0);
+    }
+  }
+
+  return {
+    top: _offset.top - parentOffset.top - toFloat(elStyles.marginTop, 0),
+    left: _offset.left - parentOffset.left - toFloat(elStyles.marginLeft, 0)
+  };
+}; // Find all tabable elements in the given element
+// Assumes users have not used `tabindex` > `0` on elements
+
+var getTabables = function getTabables() {
+  var el = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : document;
+  return dom_selectAll(TABABLE_SELECTOR, el).filter(isVisible).filter(function (i) {
+    return i.tabIndex > -1 && !i.disabled;
+  });
+};
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/mixins/form.js
+
+var SELECTOR = 'input, textarea, select'; // @vue/component
+
+/* harmony default export */ var mixins_form = ({
+  props: {
+    name: {
+      type: String // default: undefined
+
+    },
+    id: {
+      type: String // default: undefined
+
+    },
+    disabled: {
+      type: Boolean
+    },
+    required: {
+      type: Boolean,
+      default: false
+    },
+    form: {
+      type: String // default: null
+
+    },
+    autofocus: {
+      type: Boolean,
+      default: false
+    }
+  },
+  mounted: function mounted() {
+    this.handleAutofocus();
+  },
+
+  /* istanbul ignore next */
+  activated: function activated() {
+    this.handleAutofocus();
+  },
+  methods: {
+    handleAutofocus: function handleAutofocus() {
+      var _this = this;
+
+      this.$nextTick(function () {
+        requestAF(function () {
+          var el = _this.$el;
+
+          if (_this.autofocus && isVisible(el)) {
+            if (!matches(el, SELECTOR)) {
+              el = dom_select(SELECTOR, el);
+            }
+
+            el && el.focus && el.focus();
+          }
+        });
+      });
+    }
+  }
+});
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/clone-deep.js
+function clone_deep_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function clone_deep_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { clone_deep_ownKeys(Object(source), true).forEach(function (key) { clone_deep_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { clone_deep_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function clone_deep_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+
+
+var clone_deep_cloneDeep = function cloneDeep(obj) {
+  var defaultValue = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : obj;
+
+  if (isArray(obj)) {
+    return obj.reduce(function (result, val) {
+      return [].concat(_toConsumableArray(result), [cloneDeep(val, val)]);
+    }, []);
+  }
+
+  if (isPlainObject(obj)) {
+    return keys(obj).reduce(function (result, key) {
+      return clone_deep_objectSpread({}, result, clone_deep_defineProperty({}, key, cloneDeep(obj[key], obj[key])));
+    }, {});
+  }
+
+  return defaultValue;
+};
+/* harmony default export */ var clone_deep = (clone_deep_cloneDeep);
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/identity.js
+var identity = function identity(x) {
+  return x;
+};
+
+/* harmony default export */ var utils_identity = (identity);
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/get.js
+
+
+var RX_ARRAY_NOTATION = /\[(\d+)]/g;
+/**
+ * Get property defined by dot/array notation in string, returns undefined if not found
+ *
+ * @link https://gist.github.com/jeneg/9767afdcca45601ea44930ea03e0febf#gistcomment-1935901
+ *
+ * @param {Object} obj
+ * @param {string|Array} path
+ * @return {*}
+ */
+
+var get_getRaw = function getRaw(obj, path) {
+  var defaultValue = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : undefined;
+  // Handle array of path values
+  path = isArray(path) ? path.join('.') : path; // If no path or no object passed
+
+  if (!path || !isObject(obj)) {
+    return defaultValue;
+  } // Handle edge case where user has dot(s) in top-level item field key
+  // See https://github.com/bootstrap-vue/bootstrap-vue/issues/2762
+  // Switched to `in` operator vs `hasOwnProperty` to handle obj.prototype getters
+  // https://github.com/bootstrap-vue/bootstrap-vue/issues/3463
+
+
+  if (path in obj) {
+    return obj[path];
+  } // Handle string array notation (numeric indices only)
+
+
+  path = String(path).replace(RX_ARRAY_NOTATION, '.$1');
+  var steps = path.split('.').filter(utils_identity); // Handle case where someone passes a string of only dots
+
+  if (steps.length === 0) {
+    return defaultValue;
+  } // Traverse path in object to find result
+  // Switched to `in` operator vs `hasOwnProperty` to handle obj.prototype getters
+  // https://github.com/bootstrap-vue/bootstrap-vue/issues/3463
+
+
+  return steps.every(function (step) {
+    return isObject(obj) && step in obj && !isUndefinedOrNull(obj = obj[step]);
+  }) ? obj : isNull(obj) ? null : defaultValue;
+};
+/**
+ * Get property defined by dot/array notation in string.
+ *
+ * @link https://gist.github.com/jeneg/9767afdcca45601ea44930ea03e0febf#gistcomment-1935901
+ *
+ * @param {Object} obj
+ * @param {string|Array} path
+ * @param {*} defaultValue (optional)
+ * @return {*}
+ */
+
+var get_get = function get(obj, path) {
+  var defaultValue = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+  var val = get_getRaw(obj, path);
+  return isUndefinedOrNull(val) ? defaultValue : val;
+};
+/* harmony default export */ var utils_get = (get_get);
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/memoize.js
+
+
+var memoize_memoize = function memoize(fn) {
+  var cache = create(null);
+  return function () {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    var argsKey = JSON.stringify(args);
+    return cache[argsKey] = cache[argsKey] || fn.apply(null, args);
+  };
+};
+
+/* harmony default export */ var utils_memoize = (memoize_memoize);
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/config-defaults.js
+ // --- General BootstrapVue configuration ---
+// NOTES
+//
+// The global config SHALL NOT be used to set defaults for Boolean props, as the props
+// would loose their semantic meaning, and force people writing 3rd party components to
+// explicity set a true or false value using the v-bind syntax on boolean props
+//
+// Supported config values (depending on the prop's supported type(s)):
+// `String`, `Array`, `Object`, `null` or `undefined`
+// BREAKPOINT DEFINITIONS
+//
+// Some components (`<b-col>` and `<b-form-group>`) generate props based on breakpoints,
+// and this occurs when the component is first loaded (evaluated), which may happen
+// before the config is created/modified
+//
+// To get around this we make these components' props async (lazy evaluation)
+// The component definition is only called/executed when the first access to the
+// component is used (and cached on subsequent uses)
+// PROP DEFAULTS
+//
+// For default values on props, we use the default value factory function approach so
+// that the default values are pulled in at each component instantiation
+//
+//  props: {
+//    variant: {
+//      type: String,
+//      default: () => getConfigComponent('BAlert', 'variant')
+//    }
+//  }
+//
+// We also provide a cached getter for breakpoints, which are "frozen" on first access
+// prettier-ignore
+
+/* harmony default export */ var config_defaults = (object_deepFreeze({
+  // Breakpoints
+  breakpoints: ['xs', 'sm', 'md', 'lg', 'xl'],
+  // Form controls
+  formControls: {
+    size: undefined
+  },
+  // Component specific defaults are keyed by the component
+  // name (PascalCase) and prop name (camelCase)
+  BAlert: {
+    dismissLabel: 'Close',
+    variant: 'info'
+  },
+  BAvatar: {
+    variant: 'secondary',
+    badgeVariant: 'primary'
+  },
+  BBadge: {
+    variant: 'secondary'
+  },
+  BButton: {
+    size: undefined,
+    variant: 'secondary'
+  },
+  BButtonClose: {
+    content: '&times;',
+    // `textVariant` is `null` to inherit the current text color
+    textVariant: undefined,
+    ariaLabel: 'Close'
+  },
+  BCalendar: {
+    // BFormDate will choose these first if not provided in BFormDate section
+    labelPrevDecade: 'Previous decade',
+    labelPrevYear: 'Previous year',
+    labelPrevMonth: 'Previous month',
+    labelCurrentMonth: 'Current month',
+    labelNextMonth: 'Next month',
+    labelNextYear: 'Next year',
+    labelNextDecade: 'Next decade',
+    labelToday: 'Today',
+    labelSelected: 'Selected date',
+    labelNoDateSelected: 'No date selected',
+    labelCalendar: 'Calendar',
+    labelNav: 'Calendar navigation',
+    labelHelp: 'Use cursor keys to navigate calendar dates'
+  },
+  BCardSubTitle: {
+    // `<b-card>` and `<b-card-body>` also inherit this prop
+    subTitleTextVariant: 'muted'
+  },
+  BCarousel: {
+    labelPrev: 'Previous Slide',
+    labelNext: 'Next Slide',
+    labelGotoSlide: 'Goto Slide',
+    labelIndicators: 'Select a slide to display'
+  },
+  BDropdown: {
+    toggleText: 'Toggle Dropdown',
+    size: undefined,
+    variant: 'secondary',
+    splitVariant: undefined
+  },
+  BFormDatepicker: {
+    // BFormDatepicker will choose from BCalendar first if not provided here
+    labelPrevDecade: undefined,
+    labelPrevYear: undefined,
+    labelPrevMonth: undefined,
+    labelCurrentMonth: undefined,
+    labelNextMonth: undefined,
+    labelNextYear: undefined,
+    labelNextDecade: undefined,
+    labelToday: undefined,
+    labelSelected: undefined,
+    labelNoDateSelected: undefined,
+    labelCalendar: undefined,
+    labelNav: undefined,
+    labelHelp: undefined,
+    // These props are specific to BFormDatepicker
+    labelTodayButton: 'Select today',
+    labelResetButton: 'Reset',
+    labelCloseButton: 'Close'
+  },
+  BFormFile: {
+    browseText: 'Browse',
+    // Chrome default file prompt
+    placeholder: 'No file chosen',
+    dropPlaceholder: 'Drop files here'
+  },
+  BFormRating: {
+    variant: null,
+    color: null
+  },
+  BFormTag: {
+    removeLabel: 'Remove tag',
+    variant: 'secondary'
+  },
+  BFormTags: {
+    addButtonText: 'Add',
+    addButtonVariant: 'outline-secondary',
+    duplicateTagText: 'Duplicate tag(s)',
+    invalidTagText: 'Invalid tag(s)',
+    placeholder: 'Add tag...',
+    tagRemoveLabel: 'Remove tag',
+    tagRemovedLabel: 'Tag removed',
+    tagVariant: 'secondary'
+  },
+  BFormText: {
+    textVariant: 'muted'
+  },
+  BFormTimepicker: {
+    // Fallback to BTime
+    labelNoTimeSelected: undefined,
+    labelSelected: undefined,
+    labelHours: undefined,
+    labelMinutes: undefined,
+    labelSeconds: undefined,
+    labelAmpm: undefined,
+    labelAm: undefined,
+    labelPm: undefined,
+    // Fallback to BTime then BFormSpinbutton
+    labelDecrement: undefined,
+    labelIncrement: undefined,
+    // These props are specific to BFormTimepicker
+    labelNowButton: 'Select now',
+    labelResetButton: 'Reset',
+    labelCloseButton: 'Close'
+  },
+  BFormSpinbutton: {
+    labelDecrement: 'Decrement',
+    labelIncrement: 'Increment'
+  },
+  BImg: {
+    blankColor: 'transparent'
+  },
+  BImgLazy: {
+    blankColor: 'transparent'
+  },
+  BInputGroup: {
+    size: undefined
+  },
+  BJumbotron: {
+    bgVariant: undefined,
+    borderVariant: undefined,
+    textVariant: undefined
+  },
+  BListGroupItem: {
+    variant: undefined
+  },
+  BModal: {
+    titleTag: 'h5',
+    size: 'md',
+    headerBgVariant: undefined,
+    headerBorderVariant: undefined,
+    headerTextVariant: undefined,
+    headerCloseVariant: undefined,
+    bodyBgVariant: undefined,
+    bodyTextVariant: undefined,
+    footerBgVariant: undefined,
+    footerBorderVariant: undefined,
+    footerTextVariant: undefined,
+    cancelTitle: 'Cancel',
+    cancelVariant: 'secondary',
+    okTitle: 'OK',
+    okVariant: 'primary',
+    headerCloseContent: '&times;',
+    headerCloseLabel: 'Close'
+  },
+  BNavbar: {
+    variant: null
+  },
+  BNavbarToggle: {
+    label: 'Toggle navigation'
+  },
+  BPagination: {
+    size: undefined
+  },
+  BPaginationNav: {
+    size: undefined
+  },
+  BPopover: {
+    boundary: 'scrollParent',
+    boundaryPadding: 5,
+    customClass: undefined,
+    delay: 50,
+    variant: undefined
+  },
+  BProgress: {
+    variant: undefined
+  },
+  BProgressBar: {
+    variant: undefined
+  },
+  BSpinner: {
+    variant: undefined
+  },
+  BSidebar: {
+    bgVariant: 'light',
+    textVariant: 'dark',
+    shadow: false,
+    width: undefined,
+    tag: 'div'
+  },
+  BTable: {
+    selectedVariant: 'active',
+    headVariant: undefined,
+    footVariant: undefined
+  },
+  BTime: {
+    labelNoTimeSelected: 'No time selected',
+    labelSelected: 'Selected time',
+    labelHours: 'Hours',
+    labelMinutes: 'Minutes',
+    labelSeconds: 'Seconds',
+    labelAmpm: 'AM/PM',
+    // It would be nice to be able to get these from Intl.DateTimeFormat somehow
+    labelAm: 'AM',
+    labelPm: 'PM',
+    // The following inherit from BFormSpinbutton if not provided
+    labelIncrement: undefined,
+    labelDecrement: undefined
+  },
+  BToast: {
+    toaster: 'b-toaster-top-right',
+    autoHideDelay: 5000,
+    variant: undefined,
+    toastClass: undefined,
+    headerClass: undefined,
+    bodyClass: undefined
+  },
+  BToaster: {
+    ariaLive: undefined,
+    ariaAtomic: undefined,
+    role: undefined
+  },
+  BTooltip: {
+    boundary: 'scrollParent',
+    boundaryPadding: 5,
+    customClass: undefined,
+    delay: 50,
+    variant: undefined
+  }
+}));
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/config.js
+
+
+
+
+ // --- Constants ---
+
+var PROP_NAME = '$bvConfig';
+var VueProto = vue.prototype; // --- Getter methods ---
+// All methods return a deep clone (immutable) copy of the config
+// value, to prevent mutation of the user config object.
+// Get the current user config. For testing purposes only
+
+var getConfig = function getConfig() {
+  return VueProto[PROP_NAME] ? VueProto[PROP_NAME].getConfig() : {};
+}; // Method to grab a config value based on a dotted/array notation key
+
+var config_getConfigValue = function getConfigValue(key) {
+  return VueProto[PROP_NAME] ? VueProto[PROP_NAME].getConfigValue(key) : clone_deep(get_getRaw(config_defaults, key));
+}; // Method to grab a config value for a particular component
+
+var getComponentConfig = function getComponentConfig(cmpName) {
+  var key = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+  // Return the particular config value for key for if specified,
+  // otherwise we return the full config (or an empty object if not found)
+  return key ? config_getConfigValue("".concat(cmpName, ".").concat(key)) : config_getConfigValue(cmpName) || {};
+}; // Convenience method for getting all breakpoint names
+
+var getBreakpoints = function getBreakpoints() {
+  return config_getConfigValue('breakpoints');
+}; // Private function for caching / locking-in breakpoint names
+
+var _getBreakpointsCached = utils_memoize(function () {
+  return getBreakpoints();
+}); // Convenience method for getting all breakpoint names.
+// Caches the results after first access.
+
+
+var config_getBreakpointsCached = function getBreakpointsCached() {
+  return clone_deep(_getBreakpointsCached());
+}; // Convenience method for getting breakpoints with
+// the smallest breakpoint set as ''.
+// Useful for components that create breakpoint specific props.
+
+var getBreakpointsUp = function getBreakpointsUp() {
+  var breakpoints = getBreakpoints();
+  breakpoints[0] = '';
+  return breakpoints;
+}; // Convenience method for getting breakpoints with
+// the smallest breakpoint set as ''.
+// Useful for components that create breakpoint specific props.
+// Caches the results after first access.
+
+var getBreakpointsUpCached = utils_memoize(function () {
+  var breakpoints = config_getBreakpointsCached();
+  breakpoints[0] = '';
+  return breakpoints;
+}); // Convenience method for getting breakpoints with
+// the largest breakpoint set as ''.
+// Useful for components that create breakpoint specific props.
+
+var getBreakpointsDown = function getBreakpointsDown() {
+  var breakpoints = getBreakpoints();
+  breakpoints[breakpoints.length - 1] = '';
+  return breakpoints;
+}; // Convenience method for getting breakpoints with
+// the largest breakpoint set as ''.
+// Useful for components that create breakpoint specific props.
+// Caches the results after first access.
+
+/* istanbul ignore next: we don't use this method anywhere, yet */
+
+var getBreakpointsDownCached = function getBreakpointsDownCached()
+/* istanbul ignore next */
+{
+  var breakpoints = config_getBreakpointsCached();
+  breakpoints[breakpoints.length - 1] = '';
+  return breakpoints;
+};
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/mixins/form-size.js
+ // @vue/component
+
+/* harmony default export */ var form_size = ({
+  props: {
+    size: {
+      type: String,
+      default: function _default() {
+        return getComponentConfig('formControls', 'size');
+      }
+    }
+  },
+  computed: {
+    sizeFormClass: function sizeFormClass() {
+      return [this.size ? "form-control-".concat(this.size) : null];
+    },
+
+    /* istanbul ignore next: don't think this is used */
+    sizeBtnClass: function sizeBtnClass() {
+      return [this.size ? "btn-".concat(this.size) : null];
+    }
+  }
+});
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/mixins/form-state.js
+/* Form control contextual state class computation
+ *
+ * Returned class is either 'is-valid' or 'is-invalid' based on the 'state' prop
+ * state can be one of five values:
+ *  - true for is-valid
+ *  - false for is-invalid
+ *  - null for no contextual state
+ */
+ // @vue/component
+
+/* harmony default export */ var form_state = ({
+  props: {
+    state: {
+      // Tri-state prop: true, false, null (or undefined)
+      type: Boolean,
+      default: null
+    }
+  },
+  computed: {
+    computedState: function computedState() {
+      // If not a boolean, ensure that value is null
+      return isBoolean(this.state) ? this.state : null;
+    },
+    stateClass: function stateClass() {
+      var state = this.computedState;
+      return state === true ? 'is-valid' : state === false ? 'is-invalid' : null;
+    }
+  }
+});
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/math.js
+// Math utilty functions
+var mathMin = Math.min;
+var mathMax = Math.max;
+var mathAbs = Math.abs;
+var mathCeil = Math.ceil;
+var mathFloor = Math.floor;
+var mathPow = Math.pow;
+var mathRound = Math.round;
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/utils/string.js
+// String utilities
+ // --- Constants ---
+
+var RX_TRIM_LEFT = /^\s+/;
+var RX_TRIM_RIGHT = /\s+$/;
+var RX_REGEXP_REPLACE = /[-/\\^$*+?.()|[\]{}]/g;
+var RX_UN_KEBAB = /-(\w)/g;
+var RX_HYPHENATE = /\B([A-Z])/g; // --- Utilities ---
+// Converts PascalCase or camelCase to kebab-case
+
+var kebabCase = function kebabCase(str) {
+  return str.replace(RX_HYPHENATE, '-$1').toLowerCase();
+}; // Converts a kebab-case or camelCase string to PascalCase
+
+var pascalCase = function pascalCase(str) {
+  str = kebabCase(str).replace(RX_UN_KEBAB, function (_, c) {
+    return c ? c.toUpperCase() : '';
+  });
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}; // Lowercases the first letter of a string and returns a new string
+
+var string_lowerFirst = function lowerFirst(str) {
+  str = isString(str) ? str.trim() : String(str);
+  return str.charAt(0).toLowerCase() + str.slice(1);
+}; // Uppercases the first letter of a string and returns a new string
+
+var string_upperFirst = function upperFirst(str) {
+  str = isString(str) ? str.trim() : String(str);
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}; // Escape characters to be used in building a regular expression
+
+var string_escapeRegExp = function escapeRegExp(str) {
+  return str.replace(RX_REGEXP_REPLACE, '\\$&');
+}; // Convert a value to a string that can be rendered
+// `undefined`/`null` will be converted to `''`
+// Plain objects and arrays will be JSON stringified
+
+var string_toString = function toString(val) {
+  var spaces = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+  return isUndefinedOrNull(val) ? '' : isArray(val) || isPlainObject(val) && val.toString === Object.prototype.toString ? JSON.stringify(val, null, spaces) : String(val);
+}; // Remove leading white space from a string
+
+var trimLeft = function trimLeft(str) {
+  return string_toString(str).replace(RX_TRIM_LEFT, '');
+}; // Remove Trailing white space from a string
+
+var trimRight = function trimRight(str) {
+  return string_toString(str).replace(RX_TRIM_RIGHT, '');
+}; // Remove leading and trailing white space from a string
+
+var trim = function trim(str) {
+  return string_toString(str).trim();
+}; // Lower case a string
+
+var lowerCase = function lowerCase(str) {
+  return string_toString(str).toLowerCase();
+}; // Upper case a string
+
+var upperCase = function upperCase(str) {
+  return string_toString(str).toUpperCase();
+};
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/mixins/form-text.js
+
+
+
+ // @vue/component
+
+/* harmony default export */ var form_text = ({
+  model: {
+    prop: 'value',
+    event: 'update'
+  },
+  props: {
+    value: {
+      type: [String, Number],
+      default: ''
+    },
+    ariaInvalid: {
+      type: [Boolean, String],
+      default: false
+    },
+    readonly: {
+      type: Boolean,
+      default: false
+    },
+    plaintext: {
+      type: Boolean,
+      default: false
+    },
+    autocomplete: {
+      type: String // default: null
+
+    },
+    placeholder: {
+      type: String // default: null
+
+    },
+    formatter: {
+      type: Function // default: null
+
+    },
+    lazyFormatter: {
+      type: Boolean,
+      default: false
+    },
+    trim: {
+      type: Boolean,
+      default: false
+    },
+    number: {
+      type: Boolean,
+      default: false
+    },
+    lazy: {
+      // Only update the `v-model` on blur/change events
+      type: Boolean,
+      default: false
+    },
+    debounce: {
+      // Debounce timout (in ms). Not applicable with `lazy` prop
+      type: [Number, String],
+      default: 0
+    }
+  },
+  data: function data() {
+    return {
+      localValue: string_toString(this.value),
+      vModelValue: this.value
+    };
+  },
+  computed: {
+    computedClass: function computedClass() {
+      return [{
+        // Range input needs class `custom-range`
+        'custom-range': this.type === 'range',
+        // `plaintext` not supported by `type="range"` or `type="color"`
+        'form-control-plaintext': this.plaintext && this.type !== 'range' && this.type !== 'color',
+        // `form-control` not used by `type="range"` or `plaintext`
+        // Always used by `type="color"`
+        'form-control': !this.plaintext && this.type !== 'range' || this.type === 'color'
+      }, this.sizeFormClass, this.stateClass];
+    },
+    computedAriaInvalid: function computedAriaInvalid() {
+      if (!this.ariaInvalid || this.ariaInvalid === 'false') {
+        // `this.ariaInvalid` is `null` or `false` or 'false'
+        return this.computedState === false ? 'true' : null;
+      }
+
+      if (this.ariaInvalid === true) {
+        // User wants explicit `:aria-invalid="true"`
+        return 'true';
+      } // Most likely a string value (which could be the string 'true')
+
+
+      return this.ariaInvalid;
+    },
+    computedDebounce: function computedDebounce() {
+      // Ensure we have a positive number equal to or greater than 0
+      return mathMax(toInteger(this.debounce, 0), 0);
+    },
+    hasFormatter: function hasFormatter() {
+      return isFunction(this.formatter);
+    }
+  },
+  watch: {
+    value: function value(newVal) {
+      var stringifyValue = string_toString(newVal);
+
+      if (stringifyValue !== this.localValue && newVal !== this.vModelValue) {
+        // Clear any pending debounce timeout, as we are overwriting the user input
+        this.clearDebounce(); // Update the local values
+
+        this.localValue = stringifyValue;
+        this.vModelValue = newVal;
+      }
+    }
+  },
+  mounted: function mounted() {
+    // Create non-reactive property and set up destroy handler
+    this.$_inputDebounceTimer = null;
+    this.$on('hook:beforeDestroy', this.clearDebounce); // Preset the internal state
+
+    var value = this.value;
+    var stringifyValue = string_toString(value);
+    /* istanbul ignore next */
+
+    if (stringifyValue !== this.localValue && value !== this.vModelValue) {
+      this.localValue = stringifyValue;
+      this.vModelValue = value;
+    }
+  },
+  methods: {
+    clearDebounce: function clearDebounce() {
+      clearTimeout(this.$_inputDebounceTimer);
+      this.$_inputDebounceTimer = null;
+    },
+    formatValue: function formatValue(value, evt) {
+      var force = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+      value = string_toString(value);
+
+      if (this.hasFormatter && (!this.lazyFormatter || force)) {
+        value = this.formatter(value, evt);
+      }
+
+      return value;
+    },
+    modifyValue: function modifyValue(value) {
+      // Emulate `.trim` modifier behaviour
+      if (this.trim) {
+        value = value.trim();
+      } // Emulate `.number` modifier behaviour
+
+
+      if (this.number) {
+        value = toFloat(value, value);
+      }
+
+      return value;
+    },
+    updateValue: function updateValue(value) {
+      var _this = this;
+
+      var force = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+      var lazy = this.lazy;
+
+      if (lazy && !force) {
+        return;
+      }
+
+      value = this.modifyValue(value);
+
+      if (value !== this.vModelValue) {
+        this.clearDebounce();
+
+        var doUpdate = function doUpdate() {
+          _this.vModelValue = value;
+
+          _this.$emit('update', value);
+        };
+
+        var debounce = this.computedDebounce; // Only debounce the value update when a value greater than `0`
+        // is set and we are not in lazy mode or this is a forced update
+
+        if (debounce > 0 && !lazy && !force) {
+          this.$_inputDebounceTimer = setTimeout(doUpdate, debounce);
+        } else {
+          // Immediately update the v-model
+          doUpdate();
+        }
+      } else if (this.hasFormatter) {
+        // When the `vModelValue` hasn't changed but the actual input value
+        // is out of sync, make sure to change it to the given one
+        // Usually caused by browser autocomplete and how it triggers the
+        // change or input event, or depending on the formatter function
+        // https://github.com/bootstrap-vue/bootstrap-vue/issues/2657
+        // https://github.com/bootstrap-vue/bootstrap-vue/issues/3498
+
+        /* istanbul ignore next: hard to test */
+        var $input = this.$refs.input;
+        /* istanbul ignore if: hard to test out of sync value */
+
+        if ($input && value !== $input.value) {
+          $input.value = value;
+        }
+      }
+    },
+    onInput: function onInput(evt) {
+      // `evt.target.composing` is set by Vue
+      // https://github.com/vuejs/vue/blob/dev/src/platforms/web/runtime/directives/model.js
+      // TODO: Is this needed now with the latest Vue?
+
+      /* istanbul ignore if: hard to test composition events */
+      if (evt.target.composing) {
+        return;
+      }
+
+      var value = evt.target.value;
+      var formattedValue = this.formatValue(value, evt); // Exit when the `formatter` function strictly returned `false`
+      // or prevented the input event
+
+      /* istanbul ignore next */
+
+      if (formattedValue === false || evt.defaultPrevented) {
+        evt.preventDefault();
+        return;
+      }
+
+      this.localValue = formattedValue;
+      this.updateValue(formattedValue);
+      this.$emit('input', formattedValue);
+    },
+    onChange: function onChange(evt) {
+      var value = evt.target.value;
+      var formattedValue = this.formatValue(value, evt); // Exit when the `formatter` function strictly returned `false`
+      // or prevented the input event
+
+      /* istanbul ignore next */
+
+      if (formattedValue === false || evt.defaultPrevented) {
+        evt.preventDefault();
+        return;
+      }
+
+      this.localValue = formattedValue;
+      this.updateValue(formattedValue, true);
+      this.$emit('change', formattedValue);
+    },
+    onBlur: function onBlur(evt) {
+      // Apply the `localValue` on blur to prevent cursor jumps
+      // on mobile browsers (e.g. caused by autocomplete)
+      var value = evt.target.value;
+      var formattedValue = this.formatValue(value, evt, true);
+
+      if (formattedValue !== false) {
+        // We need to use the modified value here to apply the
+        // `.trim` and `.number` modifiers properly
+        this.localValue = string_toString(this.modifyValue(formattedValue)); // We pass the formatted value here since the `updateValue` method
+        // handles the modifiers itself
+
+        this.updateValue(formattedValue, true);
+      } // Emit native blur event
+
+
+      this.$emit('blur', evt);
+    },
+    focus: function focus() {
+      // For external handler that may want a focus method
+      if (!this.disabled) {
+        this.$el.focus();
+      }
+    },
+    blur: function blur() {
+      // For external handler that may want a blur method
+      if (!this.disabled) {
+        this.$el.blur();
+      }
+    }
+  }
+});
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/mixins/form-selection.js
+// @vue/component
+/* harmony default export */ var form_selection = ({
+  computed: {
+    selectionStart: {
+      // Expose selectionStart for formatters, etc
+      cache: false,
+
+      /* istanbul ignore next */
+      get: function get() {
+        return this.$refs.input.selectionStart;
+      },
+
+      /* istanbul ignore next */
+      set: function set(val) {
+        this.$refs.input.selectionStart = val;
+      }
+    },
+    selectionEnd: {
+      // Expose selectionEnd for formatters, etc
+      cache: false,
+
+      /* istanbul ignore next */
+      get: function get() {
+        return this.$refs.input.selectionEnd;
+      },
+
+      /* istanbul ignore next */
+      set: function set(val) {
+        this.$refs.input.selectionEnd = val;
+      }
+    },
+    selectionDirection: {
+      // Expose selectionDirection for formatters, etc
+      cache: false,
+
+      /* istanbul ignore next */
+      get: function get() {
+        return this.$refs.input.selectionDirection;
+      },
+
+      /* istanbul ignore next */
+      set: function set(val) {
+        this.$refs.input.selectionDirection = val;
+      }
+    }
+  },
+  methods: {
+    /* istanbul ignore next */
+    select: function select() {
+      var _this$$refs$input;
+
+      // For external handler that may want a select() method
+      (_this$$refs$input = this.$refs.input).select.apply(_this$$refs$input, arguments);
+    },
+
+    /* istanbul ignore next */
+    setSelectionRange: function setSelectionRange() {
+      var _this$$refs$input2;
+
+      // For external handler that may want a setSelectionRange(a,b,c) method
+      (_this$$refs$input2 = this.$refs.input).setSelectionRange.apply(_this$$refs$input2, arguments);
+    },
+
+    /* istanbul ignore next */
+    setRangeText: function setRangeText() {
+      var _this$$refs$input3;
+
+      // For external handler that may want a setRangeText(a,b,c) method
+      (_this$$refs$input3 = this.$refs.input).setRangeText.apply(_this$$refs$input3, arguments);
+    }
+  }
+});
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/mixins/form-validity.js
+// @vue/component
+/* harmony default export */ var form_validity = ({
+  computed: {
+    validity: {
+      // Expose validity property
+      cache: false,
+
+      /* istanbul ignore next */
+      get: function get() {
+        return this.$refs.input.validity;
+      }
+    },
+    validationMessage: {
+      // Expose validationMessage property
+      cache: false,
+
+      /* istanbul ignore next */
+      get: function get() {
+        return this.$refs.input.validationMessage;
+      }
+    },
+    willValidate: {
+      // Expose willValidate property
+      cache: false,
+
+      /* istanbul ignore next */
+      get: function get() {
+        return this.$refs.input.willValidate;
+      }
+    }
+  },
+  methods: {
+    /* istanbul ignore next */
+    setCustomValidity: function setCustomValidity() {
+      var _this$$refs$input;
+
+      // For external handler that may want a setCustomValidity(...) method
+      return (_this$$refs$input = this.$refs.input).setCustomValidity.apply(_this$$refs$input, arguments);
+    },
+
+    /* istanbul ignore next */
+    checkValidity: function checkValidity() {
+      var _this$$refs$input2;
+
+      // For external handler that may want a checkValidity(...) method
+      return (_this$$refs$input2 = this.$refs.input).checkValidity.apply(_this$$refs$input2, arguments);
+    },
+
+    /* istanbul ignore next */
+    reportValidity: function reportValidity() {
+      var _this$$refs$input3;
+
+      // For external handler that may want a reportValidity(...) method
+      return (_this$$refs$input3 = this.$refs.input).reportValidity.apply(_this$$refs$input3, arguments);
+    }
+  }
+});
+// CONCATENATED MODULE: ./node_modules/bootstrap-vue/esm/components/form-input/form-input.js
+function form_input_ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function form_input_objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { form_input_ownKeys(Object(source), true).forEach(function (key) { form_input_defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { form_input_ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function form_input_defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+
+
+
+
+
+
+
+ // Valid supported input types
+
+var TYPES = ['text', 'password', 'email', 'number', 'url', 'tel', 'search', 'range', 'color', 'date', 'time', 'datetime', 'datetime-local', 'month', 'week']; // @vue/component
+
+var BFormInput = /*#__PURE__*/vue.extend({
+  name: 'BFormInput',
+  mixins: [id, mixins_form, form_size, form_state, form_text, form_selection, form_validity],
+  props: {
+    // value prop defined in form-text mixin
+    // value: { },
+    type: {
+      type: String,
+      default: 'text',
+      validator: function validator(type) {
+        return arrayIncludes(TYPES, type);
+      }
+    },
+    noWheel: {
+      // Disable mousewheel to prevent wheel from changing values (i.e. number/date).
+      type: Boolean,
+      default: false
+    },
+    min: {
+      type: [String, Number] // default: null
+
+    },
+    max: {
+      type: [String, Number] // default: null
+
+    },
+    step: {
+      type: [String, Number] // default: null
+
+    },
+    list: {
+      type: String // default: null
+
+    }
+  },
+  computed: {
+    localType: function localType() {
+      // We only allow certain types
+      return arrayIncludes(TYPES, this.type) ? this.type : 'text';
+    }
+  },
+  watch: {
+    noWheel: function noWheel(newVal) {
+      this.setWheelStopper(newVal);
+    }
+  },
+  mounted: function mounted() {
+    this.setWheelStopper(this.noWheel);
+  },
+
+  /* istanbul ignore next */
+  deactivated: function deactivated() {
+    // Turn off listeners when keep-alive component deactivated
+
+    /* istanbul ignore next */
+    this.setWheelStopper(false);
+  },
+
+  /* istanbul ignore next */
+  activated: function activated() {
+    // Turn on listeners (if no-wheel) when keep-alive component activated
+
+    /* istanbul ignore next */
+    this.setWheelStopper(this.noWheel);
+  },
+  beforeDestroy: function beforeDestroy() {
+    /* istanbul ignore next */
+    this.setWheelStopper(false);
+  },
+  methods: {
+    setWheelStopper: function setWheelStopper(on) {
+      var input = this.$el; // We use native events, so that we don't interfere with propagation
+
+      eventOnOff(on, input, 'focus', this.onWheelFocus);
+      eventOnOff(on, input, 'blur', this.onWheelBlur);
+
+      if (!on) {
+        eventOff(document, 'wheel', this.stopWheel);
+      }
+    },
+    onWheelFocus: function onWheelFocus() {
+      eventOn(document, 'wheel', this.stopWheel);
+    },
+    onWheelBlur: function onWheelBlur() {
+      eventOff(document, 'wheel', this.stopWheel);
+    },
+    stopWheel: function stopWheel(evt) {
+      evt.preventDefault();
+      this.$el.blur();
+    }
+  },
+  render: function render(h) {
+    var self = this;
+    return h('input', {
+      ref: 'input',
+      class: self.computedClass,
+      directives: [{
+        name: 'model',
+        rawName: 'v-model',
+        value: self.localValue,
+        expression: 'localValue'
+      }],
+      attrs: {
+        id: self.safeId(),
+        name: self.name,
+        form: self.form || null,
+        type: self.localType,
+        disabled: self.disabled,
+        placeholder: self.placeholder,
+        required: self.required,
+        autocomplete: self.autocomplete || null,
+        readonly: self.readonly || self.plaintext,
+        min: self.min,
+        max: self.max,
+        step: self.step,
+        list: self.localType !== 'password' ? self.list : null,
+        'aria-required': self.required ? 'true' : null,
+        'aria-invalid': self.computedAriaInvalid
+      },
+      domProps: {
+        value: self.localValue
+      },
+      on: form_input_objectSpread({}, self.$listeners, {
+        input: self.onInput,
+        change: self.onChange,
+        blur: self.onBlur
+      })
+    });
+  }
+});
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/VueBootstrapTypeahead.vue?vue&type=script&lang=js&
 
 //
@@ -2658,12 +4946,16 @@ var ResizeObserver_es = __webpack_require__("6dd8");
 //
 //
 //
+//
+//
+
 
 
 /* harmony default export */ var VueBootstrapTypeaheadvue_type_script_lang_js_ = ({
   name: 'VueBootstrapTypehead',
   components: {
-    VueBootstrapTypeaheadList: VueBootstrapTypeaheadList
+    VueBootstrapTypeaheadList: VueBootstrapTypeaheadList,
+    BFormInput: BFormInput
   },
   props: {
     size: {
@@ -2708,7 +5000,11 @@ var ResizeObserver_es = __webpack_require__("6dd8");
     },
     placeholder: String,
     prepend: String,
-    append: String
+    append: String,
+    type: {
+      type: String,
+      default: 'search'
+    }
   },
   computed: {
     sizeClasses: function sizeClasses() {
@@ -2791,8 +5087,8 @@ var ResizeObserver_es = __webpack_require__("6dd8");
 });
 // CONCATENATED MODULE: ./src/components/VueBootstrapTypeahead.vue?vue&type=script&lang=js&
  /* harmony default export */ var components_VueBootstrapTypeaheadvue_type_script_lang_js_ = (VueBootstrapTypeaheadvue_type_script_lang_js_); 
-// EXTERNAL MODULE: ./src/components/VueBootstrapTypeahead.vue?vue&type=style&index=0&id=48792d67&scoped=true&lang=css&
-var VueBootstrapTypeaheadvue_type_style_index_0_id_48792d67_scoped_true_lang_css_ = __webpack_require__("892a");
+// EXTERNAL MODULE: ./src/components/VueBootstrapTypeahead.vue?vue&type=style&index=0&id=2c155288&scoped=true&lang=css&
+var VueBootstrapTypeaheadvue_type_style_index_0_id_2c155288_scoped_true_lang_css_ = __webpack_require__("a620");
 
 // CONCATENATED MODULE: ./src/components/VueBootstrapTypeahead.vue
 
@@ -2809,7 +5105,7 @@ var VueBootstrapTypeahead_component = normalizeComponent(
   staticRenderFns,
   false,
   null,
-  "48792d67",
+  "2c155288",
   null
   
 )
