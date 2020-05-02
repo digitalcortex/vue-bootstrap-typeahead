@@ -7,7 +7,8 @@
 [![npm](https://img.shields.io/npm/dm/vue-bootstrap-typeahead.svg)](https://www.npmjs.com/package/vue-bootstrap-typeahead)
 [![GitHub license](https://img.shields.io/github/license/alexurquhart/vue-bootstrap-typeahead.svg)](https://github.com/alexurquhart/vue-bootstrap-typeahead/blob/master/LICENSE.txt)
 
-A simple `list-group` based typeahead/autocomplete using Bootstrap 4 and Vue 2
+A simple `list-group` based typeahead/autocomplete using Bootstrap 4 and Vue 2.
+This fork is adding valid/invalid feedback slots to typeahead component, using b-form-input from 'bootstrap-vue' to properly handle validation and adding "type" property passed to the input field.
 
 <img src="https://raw.githubusercontent.com/alexurquhart/vue-bootstrap-typeahead/master/assets/screenshot.png" alt="Preview image of the vue-bootstrap-typeahead component">
 
