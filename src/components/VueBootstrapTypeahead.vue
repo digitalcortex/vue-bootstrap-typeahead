@@ -12,10 +12,11 @@
         :class="`form-control ${inputClass}`"
         :placeholder="placeholder"
         :aria-label="placeholder"
+        :state="state"
         :value="inputValue"
         @focus="isFocused = true"
         @blur="handleBlur"
-        @input="handleInput($event.target.value)"
+        @input="handleInput"
         autocomplete="off"
       />
       <slot name="invalid-feedback"/>
@@ -102,7 +103,8 @@ export default {
     type: {
       type: String,
       default: 'search'
-    }
+    },
+    state: Boolean
   },
 
   computed: {
@@ -141,10 +143,7 @@ export default {
     },
 
     handleHit(evt) {
-      if (typeof this.value !== 'undefined') {
-        this.$emit('input', evt.text)
-      }
-
+      this.$emit('input', evt.text)
       this.inputValue = evt.text
       this.$emit('hit', evt.data)
       this.$refs.input.blur()
@@ -163,9 +162,7 @@ export default {
       this.inputValue = newValue
 
       // If v-model is being used, emit an input event
-      if (typeof this.value !== 'undefined') {
-        this.$emit('input', newValue)
-      }
+      this.$emit('input', newValue)
     }
   },
 
@@ -178,9 +175,9 @@ export default {
 
   mounted() {
     this.$_ro = new ResizeObserver(e => {
-      this.resizeList(this.$refs.input)
+      this.resizeList(this.$refs.input.$el)
     })
-    this.$_ro.observe(this.$refs.input)
+    this.$_ro.observe(this.$refs.input.$el)
     this.$_ro.observe(this.$refs.list.$el)
   },
 
