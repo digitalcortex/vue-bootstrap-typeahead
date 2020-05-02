@@ -109,7 +109,7 @@ export default {
 
   computed: {
     sizeClasses() {
-      return this.size ? `input-group input-group-${this.size}` : 'input-group'
+      return this.size ? `input-group-${this.size}` : ''
     },
 
     formattedData() {
