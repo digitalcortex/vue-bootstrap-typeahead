@@ -164,9 +164,7 @@ export default {
       if (tgt && tgt.classList.contains('vbst-item')) {
         return
       }
-      if (!this.value) {
-        this.$emit('input', this.inputValue)
-      }
+      this.$emit('input', this.inputValue)
       this.isFocused = false
     },
 
