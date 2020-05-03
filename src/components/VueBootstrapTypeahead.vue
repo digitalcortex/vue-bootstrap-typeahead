@@ -127,6 +127,9 @@ export default {
 
     inputValue: {
       get() {
+        if (this.value === null) {
+          return ''
+        }
         return this.value
       },
       set(val) {
