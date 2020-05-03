@@ -13,7 +13,7 @@
         :placeholder="placeholder"
         :aria-label="placeholder"
         :state="state"
-        :value="inputValue"
+        v-model="inputValue"
         @focus="isFocused = true"
         @blur="handleBlur"
         @input="handleInput"
@@ -123,6 +123,15 @@ export default {
           text: this.serializer(d)
         }
       })
+    },
+
+    inputValue: {
+      get() {
+        return this.value;
+      },
+      set(val) {
+        this.$emit('input', val);
+      }
     }
   },
 
@@ -163,7 +172,6 @@ export default {
 
     handleInput(newValue) {
       this.inputValue = newValue
-
       // If v-model is being used, emit an input event
       this.$emit('input', newValue)
     }
@@ -171,8 +179,7 @@ export default {
 
   data() {
     return {
-      isFocused: false,
-      inputValue: ''
+      isFocused: false
     }
   },
 
