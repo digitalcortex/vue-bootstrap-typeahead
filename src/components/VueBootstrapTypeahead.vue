@@ -127,10 +127,10 @@ export default {
 
     inputValue: {
       get() {
-        return this.value;
+        return this.value
       },
       set(val) {
-        this.$emit('input', val);
+        this.$emit('input', val)
       }
     }
   },
